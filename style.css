@@ -91,7 +91,35 @@ nav ul li a:hover{
 /* ==========================
    HERO
 ========================== */
+<section class="hero" id="home">
 
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <h1>Future Skills Academy</h1>
+
+            <p>
+                Learn Digital Skills From Home and Build Your Freelancing Career.
+            </p>
+
+            <a href="#courses" class="btn">
+                Start Learning →
+            </a>
+
+        </div>
+
+        <div class="hero-images">
+
+            <img src="logo.jpg" class="logo-circle" alt="Logo">
+
+            <img src="founder.jpg" class="hero-banner" alt="Banner">
+
+        </div>
+
+    </div>
+
+</section>
 .hero{
     text-align:center;
     padding:90px 20px;
@@ -471,5 +499,132 @@ footer h3{
 height:220px;
 
 }
+
+}
+.hero{
+
+    background:linear-gradient(135deg,#0A2D6D,#17448f);
+
+    padding:90px 8%;
+
+    color:white;
+
+}
+
+.hero-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-text h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+    font-size:22px;
+
+    margin-bottom:30px;
+
+}
+
+.hero-images{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.logo-circle{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:10px;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+.hero-banner{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        box-shadow:0 0 20px #ff9800;
+
+    }
+
+    to{
+
+        box-shadow:0 0 60px #ffd54f;
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
 
 }
