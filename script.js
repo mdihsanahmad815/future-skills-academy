@@ -121,3 +121,67 @@ if(footer){
 }
 
 console.log("Future Skills Academy Website Loaded Successfully.");
+// ===============================
+// Future Skills Academy
+// script.js
+// ===============================
+
+// Smooth Scroll
+
+document.querySelectorAll('nav a').forEach(anchor => {
+
+    anchor.addEventListener('click', function(e) {
+
+        if (this.getAttribute('href').startsWith('#')) {
+
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+                behavior: 'smooth'
+
+            });
+
+        }
+
+    });
+
+});
+
+// Navbar Shadow
+
+window.addEventListener("scroll", function () {
+
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+
+        nav.style.boxShadow = "0 8px 25px rgba(0,0,0,.15)";
+
+    } else {
+
+        nav.style.boxShadow = "0 2px 10px rgba(0,0,0,.08)";
+
+    }
+
+});
+
+// Course Card Animation
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-10px) scale(1.03)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "translateY(0) scale(1)";
+
+    });
+
+});
