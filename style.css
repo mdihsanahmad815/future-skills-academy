@@ -1,154 +1,10 @@
 /* ==========================
-   RESET
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f5f7fb;
-    color:#333;
-    line-height:1.6;
-}
-
-/* ==========================
-   NAVBAR
-========================== */
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    background:#fff;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
-}
-
-.logo span{
-    font-size:28px;
-    font-weight:bold;
-    color:#0A2D6D;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:25px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#222;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#ff9800;
-}
-
-.join-btn{
-    background:#ff9800;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.join-btn:hover{
-    background:#0A2D6D;
-}
-
-/* ==========================
-   HERO
-========================== */
-
-.hero{
-    text-align:center;
-    padding:90px 20px;
-}
-
-.hero h1{
-    font-size:55px;
-    color:#0A2D6D;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    color:#555;
-    margin-bottom:35px;
-}
-
-.btn{
-    display:inline-block;
-    background:#ff9800;
-    color:#fff;
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:10px;
-    font-size:18px;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#0A2D6D;
-}
-
-.hero-image{
-    width:420px;
-    max-width:100%;
-    margin-top:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
-
-/* ==========================
    COURSES
 ========================== */
 
 .course{
     width:90%;
     margin:80px auto;
-}
-
-.course h2{
-    text-align:center;
-    color:#0A2D6D;
-    font-size:42px;
-    margin-bottom:40px;
-}
-
-.course{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
@@ -156,6 +12,10 @@ nav ul li a:hover{
 
 .course h2{
     grid-column:1/-1;
+    text-align:center;
+    color:#0A2D6D;
+    font-size:42px;
+    margin-bottom:20px;
 }
 
 .card{
@@ -177,8 +37,8 @@ nav ul li a:hover{
 }
 
 .card p{
-    margin-bottom:20px;
     color:#555;
+    margin-bottom:20px;
 }
 
 .card button{
@@ -193,183 +53,4 @@ nav ul li a:hover{
 
 .card button:hover{
     background:#0A2D6D;
-}
-
-/* ==========================
-   ABOUT
-========================== */
-
-.about{
-    width:90%;
-    margin:80px auto;
-    text-align:center;
-}
-
-.about h2{
-    color:#0A2D6D;
-    font-size:42px;
-    margin-bottom:25px;
-}
-
-.about-logo{
-    width:170px;
-    margin:25px auto;
-    display:block;
-}
-
-.about h3{
-    color:#0A2D6D;
-    margin-top:30px;
-    margin-bottom:10px;
-}
-
-.about p{
-    max-width:800px;
-    margin:auto;
-    font-size:18px;
-    color:#555;
-}
-
-.about ul{
-    list-style:none;
-    margin-top:25px;
-}
-
-.about ul li{
-    margin:12px 0;
-    font-size:18px;
-}
-
-/* ==========================
-   CONTACT
-========================== */
-
-.contact{
-    text-align:center;
-    padding:70px 20px;
-}
-
-.contact h2{
-    color:#0A2D6D;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.contact p{
-    margin:12px 0;
-    font-size:18px;
-}
-
-.contact a{
-    text-decoration:none;
-    color:#0A2D6D;
-    font-weight:bold;
-}
-
-.contact a:hover{
-    color:#ff9800;
-}
-
-/* ==========================
-   FOOTER
-========================== */
-
-footer{
-    background:#0A2D6D;
-    color:white;
-    text-align:center;
-    padding:35px 20px;
-}
-
-footer h3{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-/* ==========================
-   WHATSAPP
-========================== */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    text-decoration:none;
-    font-size:30px;
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
-    transition:.3s;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-    gap:15px;
-}
-
-.logo{
-    flex-direction:column;
-}
-
-.logo span{
-    font-size:22px;
-    text-align:center;
-}
-
-nav ul{
-    flex-direction:column;
-    align-items:center;
-}
-
-nav ul li{
-    margin:10px 0;
-}
-
-.hero h1{
-    font-size:35px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.hero-image{
-    width:95%;
-}
-
-.course{
-    grid-template-columns:1fr;
-}
-
-.about h2,
-.contact h2{
-    font-size:30px;
-}
-
-.about p,
-.about ul li,
-.contact p{
-    font-size:16px;
-}
-
-.whatsapp{
-    width:55px;
-    height:55px;
-}
 }
