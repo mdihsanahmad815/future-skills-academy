@@ -1,588 +1,555 @@
-/* ==========================
-   GOOGLE FONT
-========================== */
+/*==============================
+      PREMIUM COURSES
+==============================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-/* ==========================
-   RESET
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+.courses{
+    width:90%;
+    margin:100px auto;
 }
 
-html{
-    scroll-behavior:smooth;
+.title{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-body{
-    background:#f4f8ff;
-    color:#222;
-    overflow-x:hidden;
-}
-
-/* ==========================
-   NAVBAR
-========================== */
-
-nav{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(15px);
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo img{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #ff9800;
-    box-shadow:0 0 20px rgba(255,152,0,.5);
-    transition:.4s;
-}
-
-.logo img:hover{
-    transform:rotate(360deg) scale(1.08);
-    box-shadow:0 0 30px rgba(255,152,0,.8);
-}
-
-.logo h2{
-    font-size:40px;
-    color:#fff;
-    font-weight:800;
-}
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-
-nav ul li a{
-    color:#222;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#ff9800;
-}
-
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-/* ==========================
-   THEME BUTTON
-========================== */
-
-#theme-btn{
-
-    width:45px;
-
-    height:45px;
-
-    border:none;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    background:#0A2D6D;
-
-    color:white;
-
-    font-size:18px;
-
-    transition:.3s;
-
-}
-
-#theme-btn:hover{
-
-    transform:rotate(180deg);
-
-}
-
-/* ==========================
-   JOIN BUTTON
-========================== */
-
-.join-btn{
-
-    padding:12px 30px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    color:white;
-
-    font-weight:600;
-
-    background:linear-gradient(45deg,#ff9800,#ff5e00);
-
-    transition:.4s;
-
-    box-shadow:0 10px 25px rgba(255,152,0,.35);
-
-}
-
-.join-btn:hover{
-
-    transform:translateY(-5px);
-
-}
-
-/* ==========================
-   HERO
-========================== */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:140px 8% 80px;
-
-    gap:60px;
-
-}
-
-.hero-text{
-
-    flex:1;
-
-}
-
-.hero-text h1{
-
-    font-size:65px;
-
-    line-height:1.2;
-
+.title h2{
+    font-size:45px;
     color:#0A2D6D;
-
-    margin-bottom:25px;
-
+    font-weight:700;
 }
 
-.hero-text p{
-
-    font-size:20px;
-
+.title p{
     color:#666;
+    margin-top:10px;
+    font-size:18px;
+}
 
-    margin-bottom:40px;
+.course-container{
 
-    max-width:550px;
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
 
 }
 
-/* ==========================
-   HERO BUTTONS
-========================== */
+.course-card{
 
-.hero-btn{
+    background:#fff;
 
-    display:flex;
+    border-radius:25px;
 
-    gap:20px;
+    padding:35px 25px;
 
-}
+    text-align:center;
 
-.btn{
+    position:relative;
 
-    padding:15px 38px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    color:white;
-
-    font-weight:700;
-
-    background:linear-gradient(45deg,#ff9800,#ff5e00);
+    overflow:hidden;
 
     transition:.4s;
 
-    box-shadow:0 10px 25px rgba(255,152,0,.35);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    border:1px solid rgba(255,255,255,.2);
 
 }
 
-.btn:hover{
+.course-card::before{
 
-    transform:translateY(-6px);
+    content:"";
 
-}
+    position:absolute;
 
-.btn2{
+    width:180px;
 
-    padding:15px 38px;
+    height:180px;
 
-    border-radius:50px;
+    background:rgba(255,152,0,.12);
 
-    text-decoration:none;
+    border-radius:50%;
 
-    color:#0A2D6D;
+    top:-90px;
 
-    border:2px solid #0A2D6D;
+    right:-90px;
 
-    font-weight:700;
-
-    transition:.4s;
+    transition:.5s;
 
 }
 
-.btn2:hover{
+.course-card:hover::before{
 
-    background:#0A2D6D;
-
-    color:white;
+    transform:scale(2);
 
 }
 
-/* ==========================
-   HERO IMAGE
-========================== */
+.course-card:hover{
 
-.hero-image{
+    transform:translateY(-12px);
 
-    flex:1;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.course-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
 
     display:flex;
 
     justify-content:center;
 
-}
+    align-items:center;
 
-.hero-image img{
+    font-size:42px;
 
-    width:420px;
+    background:linear-gradient(135deg,#ff9800,#ff5e00);
 
-    border-radius:30px;
+    color:#fff;
 
-    animation:float 4s ease-in-out infinite;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.2);
+    box-shadow:0 10px 25px rgba(255,152,0,.35);
 
 }
 
-@keyframes float{
+.course-card h3{
 
-0%,100%{
+    margin-top:25px;
 
-transform:translateY(0);
+    font-size:24px;
 
-}
-
-50%{
-
-transform:translateY(-18px);
+    color:#0A2D6D;
 
 }
 
-}
+.course-card p{
 
-/* ==========================
-   RESPONSIVE
-========================== */
+    margin:18px 0 30px;
 
-@media(max-width:900px){
+    color:#666;
 
-.hero{
-
-flex-direction:column-reverse;
-
-text-align:center;
-
-padding-top:120px;
+    line-height:1.7;
 
 }
 
-.hero-text h1{
+.course-btn{
 
-font-size:42px;
+    display:inline-block;
 
-}
+    padding:14px 35px;
 
-.hero-btn{
+    border-radius:50px;
 
-justify-content:center;
+    text-decoration:none;
 
-flex-wrap:wrap;
+    color:#fff;
 
-}
+    font-weight:600;
 
-.hero-image img{
+    background:linear-gradient(45deg,#0A2D6D,#2563eb);
 
-width:90%;
+    position:relative;
 
-}
+    overflow:hidden;
 
-nav{
-
-flex-direction:column;
-
-gap:15px;
+    transition:.4s;
 
 }
 
-nav ul{
+.course-btn::before{
 
-gap:20px;
+    content:"";
 
-flex-wrap:wrap;
+    position:absolute;
 
-justify-content:center;
+    width:0;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    background:linear-gradient(45deg,#ff9800,#ff5e00);
+
+    transition:.4s;
+
+    z-index:-1;
 
 }
 
-.logo h2{
+.course-btn:hover::before{
 
-font-size:22px;
+    width:100%;
+
+}
+
+.course-btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 10px 25px rgba(255,152,0,.45);
 
 }
 
-}
-/* ==========================
-   DARK MODE
-========================== */
+/*==============================
+      DARK MODE
+==============================*/
 
-body.dark{
-
-    background:#0f172a;
+body.dark .courses{
 
     color:white;
 
 }
 
-body.dark nav{
-
-    background:rgba(15,23,42,.95);
-
-}
-
-body.dark .logo h2{
+body.dark .title h2{
 
     color:white;
 
 }
 
-body.dark nav ul li a{
-
-    color:white;
-
-}
-
-body.dark .hero h1{
-
-    color:white;
-
-}
-
-body.dark .hero p{
+body.dark .title p{
 
     color:#d1d5db;
 
 }
 
-body.dark .btn2{
-
-    color:white;
-
-    border:2px solid white;
-
-}
-
-body.dark .btn2:hover{
-
-    background:white;
-
-    color:#111827;
-
-}
-
-body.dark .card{
+body.dark .course-card{
 
     background:#1e293b;
 
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .course-card h3{
+
     color:white;
 
 }
 
-body.dark .card h3{
-
-    color:white;
-
-}
-
-body.dark .card p{
+body.dark .course-card p{
 
     color:#d1d5db;
 
 }
 
-body.dark .about{
+/*==============================
+      MOBILE
+==============================*/
 
-    color:white;
+@media(max-width:768px){
 
-}
+.title h2{
 
-body.dark .about h2,
-
-body.dark .about h3{
-
-    color:white;
+font-size:34px;
 
 }
 
-body.dark .about p,
+.title p{
 
-body.dark .about li{
+font-size:16px;
 
+}
+
+.course-card{
+
+padding:28px 20px;
+
+}
+
+.course-icon{
+
+width:75px;
+
+height:75px;
+
+font-size:34px;
+
+}
+
+.course-card h3{
+
+font-size:21px;
+
+}
+
+.course-btn{
+
+padding:12px 28px;
+
+}
+
+}
+/*==============================
+        ABOUT SECTION
+==============================*/
+
+.about{
+    width:90%;
+    margin:100px auto;
+}
+
+.about-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    width:380px;
+    max-width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,.20);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h3{
+    color:#ff9800;
+    font-size:22px;
+}
+
+.about-text h2{
+    font-size:42px;
+    color:#0A2D6D;
+    margin:10px 0 20px;
+}
+
+.about-text p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.about-text ul{
+    list-style:none;
+}
+
+.about-text li{
+    margin:12px 0;
+    font-size:18px;
+}
+
+/*==============================
+        CONTACT
+==============================*/
+
+.contact{
+    width:90%;
+    margin:100px auto;
+}
+
+.contact-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+}
+
+.contact-card h3{
+    color:#0A2D6D;
+    margin-bottom:15px;
+}
+
+.contact-card a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/*==============================
+        FOOTER
+==============================*/
+
+footer{
+    background:#0A2D6D;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+    margin-top:80px;
+}
+
+footer img{
+    width:90px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+footer h2{
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/*==============================
+      WHATSAPP BUTTON
+==============================*/
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:32px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    animation:whats 2s infinite;
+    z-index:999;
+}
+
+@keyframes whats{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.12);}
+    100%{transform:scale(1);}
+}
+
+/*==============================
+      DARK MODE
+==============================*/
+
+body.dark .about-text h2,
+body.dark .contact-card h3{
+    color:#fff;
+}
+
+body.dark .about-text p,
+body.dark .about-text li{
     color:#d1d5db;
-
 }
 
-body.dark .contact{
-
-    color:white;
-
-}
-
-body.dark .contact h2{
-
-    color:white;
-
-}
-
-body.dark .contact a{
-
-    color:#60a5fa;
-
+body.dark .contact-card{
+    background:#1e293b;
+    color:#fff;
 }
 
 body.dark footer{
-
     background:#020617;
-
-}
-/* ==========================
-   HERO BACKGROUND
-========================== */
-
-.hero{
-    position:relative;
-    overflow:hidden;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:450px;
-    height:450px;
-    background:#ff9800;
-    border-radius:50%;
-    filter:blur(180px);
-    top:-120px;
-    left:-120px;
-    opacity:.25;
+/*==============================
+      MOBILE
+==============================*/
+
+@media(max-width:768px){
+
+.about-box{
+    flex-direction:column;
+    text-align:center;
 }
 
-.hero::after{
-    content:"";
-    position:absolute;
-    width:400px;
-    height:400px;
-    background:#2563eb;
-    border-radius:50%;
-    filter:blur(180px);
-    bottom:-150px;
-    right:-100px;
-    opacity:.25;
+.about-image img{
+    width:280px;
 }
 
-/* ==========================
-   FOUNDER CARD
-========================== */
-
-.hero-image{
-    position:relative;
+.about-text h2{
+    font-size:30px;
 }
 
-.hero-image::before{
-    content:"Founder";
-    position:absolute;
-    top:-18px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#ff9800;
-    color:#fff;
-    padding:8px 22px;
-    border-radius:30px;
-    font-weight:700;
-    letter-spacing:1px;
-    z-index:10;
+.contact-card{
+    padding:25px;
 }
 
-.hero-image img{
-    width:430px;
-    border-radius:25px;
-    border:6px solid rgba(255,255,255,.15);
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.35),
-        0 0 40px rgba(255,152,0,.35);
+.whatsapp{
+    width:58px;
+    height:58px;
+    font-size:28px;
+    right:18px;
+    bottom:18px;
 }
 
-/* Floating animation */
+footer img{
+    width:70px;
+}
 
-.hero-image img{
+}
+/*==============================
+      ACTIVE MENU
+==============================*/
 
-    animation:float 4s ease-in-out infinite;
+nav ul li a.active{
+
+color:#ff9800;
+
+font-weight:700;
 
 }
 
-@keyframes float{
+/*==============================
+      SCROLL ANIMATION
+==============================*/
 
-0%,100%{
+.hero,
+.course-card,
+.about-box,
+.contact-card{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.8s;
+
+}
+
+.show{
+
+opacity:1;
 
 transform:translateY(0);
 
 }
 
-50%{
+/*==============================
+      PAGE LOAD
+==============================*/
 
-transform:translateY(-18px);
+body{
+
+opacity:0;
+
+transition:.5s;
 
 }
+
+body.loaded{
+
+opacity:1;
 
 }
