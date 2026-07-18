@@ -1,26 +1,53 @@
+/* ==========================
+   RESET
+========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     background:#f5f7fb;
+    color:#333;
 }
 
-/* Navigation */
+/* ==========================
+   NAVIGATION
+========================== */
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
+    padding:18px 8%;
     background:#ffffff;
     box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo span{
     font-size:28px;
     font-weight:bold;
     color:#0A2D6D;
@@ -37,25 +64,37 @@ nav ul li{
 
 nav ul li a{
     text-decoration:none;
-    color:#333;
+    color:#222;
     font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff9800;
 }
 
 nav button{
     background:#ff9800;
-    color:#fff;
+    color:white;
     border:none;
     padding:12px 25px;
     border-radius:8px;
     cursor:pointer;
     font-size:16px;
+    transition:.3s;
 }
 
-/* Hero Section */
+nav button:hover{
+    background:#0A2D6D;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
 
 .hero{
     text-align:center;
-    padding:100px 20px;
+    padding:90px 20px;
 }
 
 .hero h1{
@@ -73,9 +112,9 @@ nav button{
 .btn{
     display:inline-block;
     background:#ff9800;
-    color:#fff;
-    padding:15px 35px;
+    color:white;
     text-decoration:none;
+    padding:15px 35px;
     border-radius:10px;
     font-size:18px;
     transition:.3s;
@@ -85,38 +124,42 @@ nav button{
     background:#0A2D6D;
 }
 
-/* Hero Image */
-
 .hero-image{
-    width:350px;
-    margin-top:30px;
+    width:420px;
+    max-width:100%;
+    margin-top:35px;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-/* Courses Section */
+/* ==========================
+   COURSE SECTION
+========================== */
 
 .course{
     width:90%;
-    margin:60px auto;
+    margin:80px auto;
     text-align:center;
 }
 
 .course h2{
-    font-size:40px;
+    font-size:42px;
     color:#0A2D6D;
     margin-bottom:40px;
 }
 
-/* Cards */
-
 .card{
-    max-width:400px;
-    margin:20px auto;
-    background:#fff;
+    max-width:420px;
+    margin:25px auto;
+    background:white;
     padding:30px;
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card h3{
@@ -131,7 +174,7 @@ nav button{
 
 .card button{
     background:#ff9800;
-    color:#fff;
+    color:white;
     border:none;
     padding:12px 25px;
     border-radius:8px;
@@ -142,13 +185,70 @@ nav button{
 .card button:hover{
     background:#0A2D6D;
 }
-/* Footer */
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.about h2{
+    font-size:42px;
+    color:#0A2D6D;
+    margin-bottom:25px;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    font-size:20px;
+    color:#555;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.contact h2{
+    font-size:40px;
+    color:#0A2D6D;
+    margin-bottom:20px;
+}
+
+.contact p{
+    font-size:20px;
+    margin:12px 0;
+}
+
+.contact a{
+    text-decoration:none;
+    color:#0A2D6D;
+    font-weight:bold;
+}
+
+.contact a:hover{
+    color:#ff9800;
+}
+
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
     background:#0A2D6D;
     color:white;
     text-align:center;
-    padding:30px 20px;
+    padding:35px 20px;
     margin-top:60px;
 }
 
@@ -159,13 +259,40 @@ footer h3{
 
 footer p{
     margin:8px 0;
-    font-size:16px;
 }
+
 /* ==========================
-   Responsive Design
+   WHATSAPP BUTTON
 ========================== */
 
-@media (max-width: 768px){
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    text-decoration:none;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:768px){
 
     nav{
         flex-direction:column;
@@ -173,9 +300,18 @@ footer p{
         padding:20px;
     }
 
+    .logo{
+        flex-direction:column;
+    }
+
+    .logo span{
+        font-size:24px;
+        text-align:center;
+    }
+
     nav ul{
         flex-direction:column;
-        text-align:center;
+        align-items:center;
     }
 
     nav ul li{
@@ -187,25 +323,34 @@ footer p{
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:34px;
     }
 
     .hero p{
         font-size:18px;
     }
 
-    .hero-image{
-        width:90%;
-        max-width:350px;
+    .btn{
+        font-size:16px;
     }
 
-    .course h2{
+    .hero-image{
+        width:95%;
+    }
+
+    .course h2,
+    .about h2,
+    .contact h2{
         font-size:32px;
     }
 
+    .about p,
+    .contact p{
+        font-size:17px;
+    }
+
     .card{
-        width:90%;
-        margin:20px auto;
+        width:95%;
     }
 
     footer h3{
@@ -215,100 +360,10 @@ footer p{
     footer p{
         font-size:14px;
     }
-}
-/* About Section */
 
-.about{
-    width:90%;
-    margin:60px auto;
-    text-align:center;
-}
-
-.about h2{
-    color:#0A2D6D;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.about p{
-    max-width:800px;
-    margin:auto;
-    color:#555;
-    font-size:20px;
-    line-height:1.8;
-}
-
-@media (max-width:768px){
-
-    .about h2{
-        font-size:30px;
+    .whatsapp{
+        width:55px;
+        height:55px;
+        font-size:28px;
     }
-
-    .about p{
-        font-size:17px;
-    }
-
-}
-
-.join-btn{
-    display:inline-block;
-    background:#ff9800;
-    color:#fff;
-    padding:12px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.join-btn:hover{
-    background:#e68900;
-}
-
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:30px;
-    text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,.3);
-    z-index:999;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-}
-
-.contact{
-    text-align:center;
-    padding:50px 20px;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
 }
