@@ -249,18 +249,17 @@ footer p{
     }
 
 }
-.contact{
-    text-align: center;
-    padding: 60px 20px;
+
+.join-btn{
+    display:inline-block;
+    background:#ff9800;
+    color:#fff;
+    padding:12px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-.contact h2{
-    font-size: 45px;
-    color: #0b2e74;
-    margin-bottom: 20px;
-}
-
-.contact p{
-    font-size: 20px;
-    margin: 10px 0;
+.join-btn:hover{
+    background:#e68900;
 }
