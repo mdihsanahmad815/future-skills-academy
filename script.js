@@ -185,3 +185,66 @@ cards.forEach(card => {
     });
 
 });
+/*================ BACK TO TOP ================*/
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+};
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+/*================ COUNTER ================*/
+
+const counters=document.querySelectorAll(".count");
+
+counters.forEach(counter=>{
+
+counter.innerText="0";
+
+const update=()=>{
+
+const target=+counter.getAttribute("data-target");
+
+const c=+counter.innerText;
+
+const increment=target/100;
+
+if(c<target){
+
+counter.innerText=`${Math.ceil(c+increment)}`;
+
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=target+"+";
+
+}
+
+};
+
+update();
+
+});
