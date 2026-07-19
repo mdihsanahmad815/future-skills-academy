@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | Future Skills Academy</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+
+<div class="login-page">
+
+<div class="login-card">
+
+<a href="../index.html" class="logo">
+
+<img src="../assets/images/logo.png" width="70">
+
+</a>
+
+<h2>Create Account 🚀</h2>
+
+<p>Join Future Skills Academy</p>
+
+<form>
+
+<div class="input-box">
+
+<i class="ri-user-line"></i>
+
+<input
+
+type="text"
+
+placeholder="Full Name"
+
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="ri-mail-line"></i>
+
+<input
+
+type="email"
+
+placeholder="Email Address"
+
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="ri-phone-line"></i>
+
+<input
+
+type="tel"
+
+placeholder="Phone Number"
+
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="ri-lock-line"></i>
+
+<input
+
+type="password"
+
+id="pass1"
+
+placeholder="Password"
+
+required>
+
+<i class="ri-eye-line"
+
+id="eye1"
+
+style="cursor:pointer"></i>
+
+</div>
+
+<div class="input-box">
+
+<i class="ri-lock-password-line"></i>
+
+<input
+
+type="password"
+
+id="pass2"
+
+placeholder="Confirm Password"
+
+required>
+
+<i class="ri-eye-line"
+
+id="eye2"
+
+style="cursor:pointer"></i>
+
+</div>
+
+<button
+
+class="login-btn-full">
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="or">
+
+Already have an account?
+
+</div>
+
+<a
+
+href="login.html"
+
+class="register-link">
+
+Login Here
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function toggle(pass,eye){
+
+eye.onclick=function(){
+
+if(pass.type==="password"){
+
+pass.type="text";
+
+eye.className="ri-eye-off-line";
+
+}else{
+
+pass.type="password";
+
+eye.className="ri-eye-line";
+
+}
+
+}
+
+}
+
+toggle(
+
+document.getElementById("pass1"),
+
+document.getElementById("eye1")
+
+);
+
+toggle(
+
+document.getElementById("pass2"),
+
+document.getElementById("eye2")
+
+);
+
+</script>
+
+</body>
+
+</html>
