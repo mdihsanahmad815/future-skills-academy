@@ -5,7 +5,9 @@ Premium Apple UI
 Dark / Light Theme
 
 ====================================================*/
-
+body{
+    background:red !important;
+}
 :root{
 
 --bg:#07111f;
