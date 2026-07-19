@@ -58,16 +58,12 @@ nav{
 }
 
 .logo img{
-
     width:65px;
     height:65px;
-
     border-radius:50%;
     object-fit:cover;
-
     border:3px solid #ff9800;
-
-    transition:.4s;
+}
 
 }
 
